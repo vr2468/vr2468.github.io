@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vignesh Raj N | Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --border-color: #e9ecef;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        /* Profile image CSS */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+        header h2 {
+            margin: 10px 0 0;
+            font-weight: 300;
+            color: #bdc3c7;
+        }
+        .contact-info {
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        section a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        section a:hover {
+            text-decoration: underline;
+        }
+        h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        .job-title {
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+        .job-meta {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .skill-category strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="profile.jpg" alt="Vignesh Raj N" class="profile-img">
+        
+        <h1>VIGNESH RAJ N</h1>
+        <h2>Cybersecurity | SOAR Engineer & Security Automation Developer</h2>
+        <div class="contact-info">
+            <span>📍 Chennai, India</span> | 
+            <a href="mailto:vickynavin61@gmail.com">vickynavin61@gmail.com</a> | 
+            <span>📞 9092066247</span> | 
+            <a href="https://linkedin.com/in/vignesh-raj-n" target="_blank">LinkedIn</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h3>Professional Summary</h3>
+            <p>SOAR Engineer with 2 years of hands-on Python development experience building security automation solutions, REST API integrations, and orchestration playbooks. Specializing in Palo Alto Cortex XSOAR, with strong proficiency in Git version control, unit testing, and Agile delivery. Adept at leveraging threat intelligence and SIEM integrations to drive high-fidelity automated incident response and significantly reduce Mean Time to Respond (MTTR).</p>
+        </section>
+
+        <section id="skills">
+            <h3>Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>SOAR Platform</strong>
+                    Palo Alto Cortex XSOAR
+                </div>
+                <div class="skill-category">
+                    <strong>Automation & Scripting</strong>
+                    Python, PowerShell, REST API Integration, Webhooks, JSON, YAML, demisto-sdk, Playbook & Workflow Automation
+                </div>
+                <div class="skill-category">
+                    <strong>Development & DevOps</strong>
+                    Git, Unit & Integration Testing, CI/CD concepts, Agile/Scrum
+                </div>
+                <div class="skill-category">
+                    <strong>Platform Integration</strong>
+                    Microsoft Sentinel, IBM QRadar, Google Secops SIEM, CrowdStrike Falcon EDR, Cortex XDR, Zscaler ZIA/ZPA, Skyhigh CASB, ServiceNow (ITSM), CyberArk, Active Directory
+                </div>
+                <div class="skill-category">
+                    <strong>Security Frameworks</strong>
+                    MITRE ATT&CK, Zero Trust Architecture
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h3>Work Experience</h3>
+            <div class="job">
+                <div class="job-title">SOAR Engineer | Tata Consultancy Services (TCS)</div>
+                <div class="job-meta">Aug 2024 - Present</div>
+                <ul>
+                    <li><strong>Playbook Engineering:</strong> Designed, developed, and maintained automation playbooks and integrations using OOP principles and reusable component design, successfully reducing MTTR by 40%.</li>
+                    <li><strong>API & Webhooks Integration:</strong> Built and validated custom Python and PowerShell scripts leveraging REST APIs and webhooks to seamlessly connect disparate security tools into unified automated workflows.</li>
+                    <li><strong>Automation Content Management:</strong> Managed Cortex XSOAR Content Pack development and packaging using demisto-sdk and Git version control; conducted code reviews to ensure resilient automation delivery.</li>
+                    <li><strong>ITSM Synchronization:</strong> Engineered end-to-end incident response pipelines by integrating Cortex XSOAR with ServiceNow via REST APIs to automate ticket creation, updating, and case synchronization.</li>
+                    <li><strong>Threat Intelligence Automation:</strong> Automated IOC extraction, parsing, and enrichment processes utilizing OSINT and premium threat feeds to accelerate alert triage and validation without human intervention.</li>
+                    <li><strong>SIEM Pipeline Integration:</strong> Integrated detection pipelines from Microsoft Sentinel, IBM QRadar, and Google SecOps SIEM to ingest high-fidelity alerts directly into automated response orchestration.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h3>Projects</h3>
+            <div class="job">
+                <div class="job-title">Automated Vulnerability Assessment & Report Generation using Cortex XSOAR</div>
+                <div class="job-meta">Nov 2025 – Feb 2026</div>
+                <p>Designed and implemented an automated vulnerability assessment workflow using Palo Alto Cortex XSOAR integrated with Rapid7 InsightVM/Nexpose and the organization's GHD ticketing portal. The solution enabled users to submit vulnerability scan requests through a service ticket, automatically triggered scan execution, generated vulnerability reports, and delivered results without manual intervention. This automation reduced manual effort by approximately 15 minutes per request, improved operational efficiency, standardized report generation, and accelerated vulnerability assessment processes.</p>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h3>Certifications</h3>
+            <ul>
+                <li><a href="https://learn.microsoft.com/en-us/users/vickyraj-2688/credentials/1468782c9089a6ce" target="_blank">Microsoft Certified: Azure Security Engineer Associate (AZ-500)</a></li>
+                <li><a href="https://www.credly.com/badges/1432fa92-94de-4fee-968b-73dd7b083fb7/public_url" target="_blank">Zscaler Digital Transformation Administrator (ZDTA)</a></li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h3>Education</h3>
+            <div class="job-title">Bachelor of Engineering, Electronics and Communication Engineering</div>
+            <div class="job-meta">Velammal Engineering College, Chennai | 2020 – 2024</div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Vignesh Raj N. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
