@@ -19,6 +19,7 @@
             --border-color: #e2e8f0;
             --tag-bg: #f1f5f9;
             --tag-text: #475569;
+            --tag-border: #cbd5e1;
         }
 
         * {
@@ -44,7 +45,7 @@
         }
 
         .header-content {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -103,7 +104,7 @@
 
         /* --- Main Content --- */
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: -2rem auto 3rem;
             padding: 0 20px;
             position: relative;
@@ -201,18 +202,59 @@
             font-weight: 600;
         }
 
-        /* --- Skills Grid & Tags --- */
+        /* --- Skills Grid & Cards (UPGRADED UI) --- */
+        #skills {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            padding: 0;
+        }
+        
+        #skills h3 {
+            background: var(--card-bg);
+            padding: 2.5rem 2.5rem 0;
+            margin-bottom: 0;
+            border-radius: 12px 12px 0 0;
+            border: 1px solid var(--border-color);
+            border-bottom: none;
+        }
+
+        .skills-grid-container {
+            background: var(--card-bg);
+            padding: 2rem 2.5rem 2.5rem;
+            border-radius: 0 0 12px 12px;
+            border: 1px solid var(--border-color);
+            border-top: none;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        }
+
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .skill-category {
+            background: #fdfdfd;
+            border: 1px solid var(--border-color);
+            padding: 1.25rem;
+            border-radius: 10px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+            border-color: #cbd5e1;
         }
 
         .skill-category strong {
             display: block;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.85rem;
             color: var(--primary-dark);
             font-size: 1.05rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
         }
 
         .tags {
@@ -224,11 +266,16 @@
         .tag {
             background-color: var(--tag-bg);
             color: var(--tag-text);
-            padding: 0.25rem 0.75rem;
+            padding: 0.35rem 0.85rem;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 500;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--tag-border);
+            transition: background-color 0.2s ease;
+        }
+        
+        .tag:hover {
+            background-color: #e2e8f0;
         }
 
         /* --- Footer --- */
@@ -255,7 +302,7 @@
                 flex-direction: column;
                 gap: 0.25rem;
             }
-            section {
+            section, #skills h3, .skills-grid-container {
                 padding: 1.5rem;
             }
             .skills-grid {
@@ -279,7 +326,7 @@
                     <span>&bull;</span>
                     <span>📞 9092066247</span> 
                     <span>&bull;</span>
-                    <span><a href="https://linkedin.com/in/vignesh-raj-n" target="_blank">LinkedIn Profile</a></span>
+                    <span><a href="https://linkedin.com/in/vignesh-raj-n" target="_blank">LinkedIn</a></span>
                 </div>
             </div>
         </div>
@@ -292,53 +339,94 @@
             <p>SOAR Engineer with 2 years of hands-on Python development experience building security automation solutions, REST API integrations, and orchestration playbooks. Specializing in Palo Alto Cortex XSOAR, with strong proficiency in Git version control, unit testing, and Agile delivery. Adept at leveraging threat intelligence and SIEM integrations to drive high-fidelity automated incident response and significantly reduce Mean Time to Respond (MTTR).</p>
         </section>
 
+        <!-- Upgraded Skills Section -->
         <section id="skills">
             <h3>Technical Arsenal</h3>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <strong>SOAR & Automation</strong>
-                    <div class="tags">
-                        <span class="tag">Palo Alto Cortex XSOAR</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">PowerShell</span>
-                        <span class="tag">REST APIs</span>
-                        <span class="tag">Webhooks</span>
-                        <span class="tag">JSON/YAML</span>
-                        <span class="tag">demisto-sdk</span>
+            <div class="skills-grid-container">
+                <div class="skills-grid">
+                    
+                    <div class="skill-category">
+                        <strong>SOAR</strong>
+                        <div class="tags">
+                            <span class="tag">Palo Alto Cortex XSOAR</span>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="skill-category">
-                    <strong>Cloud & Network Security</strong>
-                    <div class="tags">
-                        <span class="tag">Microsoft Sentinel</span>
-                        <span class="tag">Google SecOps SIEM</span>
-                        <span class="tag">Skyhigh CASB</span>
-                        <span class="tag">Zscaler ZIA/ZPA</span>
-                        <span class="tag">Zero Trust Architecture</span>
-                    </div>
-                </div>
 
-                <div class="skill-category">
-                    <strong>Endpoint & Threat Detection</strong>
-                    <div class="tags">
-                        <span class="tag">CrowdStrike Falcon EDR</span>
-                        <span class="tag">Cortex XDR</span>
-                        <span class="tag">IBM QRadar</span>
-                        <span class="tag">MITRE ATT&CK</span>
+                    <div class="skill-category">
+                        <strong>SIEM</strong>
+                        <div class="tags">
+                            <span class="tag">IBM QRadar</span>
+                            <span class="tag">Microsoft Sentinel</span>
+                            <span class="tag">Google SecOps SIEM</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="skill-category">
-                    <strong>DevOps & IT Operations</strong>
-                    <div class="tags">
-                        <span class="tag">Git</span>
-                        <span class="tag">CI/CD</span>
-                        <span class="tag">Agile/Scrum</span>
-                        <span class="tag">CyberArk</span>
-                        <span class="tag">Active Directory</span>
-                        <span class="tag">ServiceNow (ITSM)</span>
+                    <div class="skill-category">
+                        <strong>Endpoint Security</strong>
+                        <div class="tags">
+                            <span class="tag">CrowdStrike Falcon EDR</span>
+                            <span class="tag">Cortex XDR</span>
+                        </div>
                     </div>
+
+                    <div class="skill-category">
+                        <strong>Cloud & Network Security</strong>
+                        <div class="tags">
+                            <span class="tag">Skyhigh CASB</span>
+                            <span class="tag">Zscaler Internet Access</span>
+                            <span class="tag">Zscaler Private Access</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <strong>Identity Security</strong>
+                        <div class="tags">
+                            <span class="tag">Windows Active Directory</span>
+                            <span class="tag">Microsoft Entra ID (Azure AD)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <strong>ITSM</strong>
+                        <div class="tags">
+                            <span class="tag">ServiceNow</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <strong>Development & DevOps</strong>
+                        <div class="tags">
+                            <span class="tag">Git</span>
+                            <span class="tag">Unit & Integration Testing</span>
+                            <span class="tag">CI/CD concepts</span>
+                            <span class="tag">Agile/Scrum</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <strong>Automation & Scripting</strong>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PowerShell</span>
+                            <span class="tag">Bash</span>
+                            <span class="tag">REST API Integration</span>
+                            <span class="tag">Webhooks</span>
+                            <span class="tag">JSON</span>
+                            <span class="tag">YAML</span>
+                            <span class="tag">demisto-sdk</span>
+                            <span class="tag">Playbook Engineering</span>
+                            <span class="tag">Workflow Automation</span>                                                   
+                            </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <strong>Security Frameworks</strong>
+                        <div class="tags">
+                            <span class="tag">MITRE ATT&CK</span>
+                            <span class="tag">Zero Trust Architecture</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -399,7 +487,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 Vignesh Raj N. Designed for Security & Automation.</p>
+        <p>&copy; 2026 Vignesh Raj N.</p>
     </footer>
 
 </body>
